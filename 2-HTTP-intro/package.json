@@ -1,0 +1,23 @@
+{
+  "name": "masterclass-express-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thijsBoet/masterclass-express-mongodb.git"
+  },
+  "author": "matthijs boet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thijsBoet/masterclass-express-mongodb/issues"
+  },
+  "homepage": "https://github.com/thijsBoet/masterclass-express-mongodb#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
