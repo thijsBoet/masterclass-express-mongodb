@@ -4,16 +4,18 @@ const morgan = require("morgan")
 const cors = require("cors")
 const colors = require("colors")
 const connectDB = require("./config/db")
+const app = express();
 
 dotenv.config({
     path: "./config/config.env"
 })
-
 connectDB();
+app.use(express.json())
+app.use(cors());
+
+// Route Files
 const bootcamps = require('./routes/bootcamps')
 
-const app = express();
-app.use(cors());
 
 // Dev logger middleware
 if (process.env.NODE_ENV === "development") {
