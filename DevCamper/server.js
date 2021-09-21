@@ -12,18 +12,19 @@ dotenv.config({
 })
 
 connectDB();
+
 // Route Files
 const bootcamps = require('./routes/bootcamps')
 app.use(errorHandler)
 app.use(express.json())
 app.use(cors());
-
+// Mount router
+app.use('/api/v1/bootcamps', bootcamps)
 
 // Dev logger middleware
 if (process.env.NODE_ENV === "development") app.use(morgan("dev"))
 
-// Mount router
-app.use('/api/v1/bootcamps', bootcamps)
+
 
 const PORT = process.env.PORT || 5000
 
